@@ -9,16 +9,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class OnboardingScreenOne extends StatefulWidget {
-  OnboardingScreenOne({super.key});
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
 
   @override
-  State<OnboardingScreenOne> createState() => _OnboardingScreenOneState();
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
 int currentIndex = 0;
 
-class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:bridge_v2/onboarding/onboarding_one.dart';
+import 'package:bridge_v2/onboarding/onboarding.dart';
 import 'package:bridge_v2/routes/route_names.dart';
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:flutter/material.dart';
