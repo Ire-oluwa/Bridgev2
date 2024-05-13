@@ -5,6 +5,7 @@ abstract class RouteName {
   static const onboardingThree = "/onboardingThree";
   static const signUp = "/signUp";
   static const signIn = "/signIn";
-  static const resetPassword = "/Reset Password";
+  static const resetPasswordEmailLink = "/Reset Password";
+  static const resetPasswordConfirmPassword = "/Reset Password Confirm";
 
 }

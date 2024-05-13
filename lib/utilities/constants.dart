@@ -8,6 +8,7 @@ const kGrey = Colors.grey;
 const kBlurColour = Color(0xFF19392C);
 const kYellowBackground = Color(0xffFAD918);
 const kFadedYellow = Color(0xffFFFADF);
+const kTextFieldBorder = Color(0xffB8C9C9);
 
 Widget kUnfocus({child}) => GestureDetector(
   behavior: HitTestBehavior.translucent,
@@ -32,6 +33,9 @@ const kTextInputAction = TextInputAction.next;
 final kNameFormatter = [
   FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z ]'))
 ];
+final kSingleNameFormatter = [
+  FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]'))
+];
 final kTextFormatter = [
   FilteringTextInputFormatter.allow(RegExp('[a-zA-Z0-9 ]')),
 ];
@@ -41,6 +45,9 @@ final kEmailFormatter = [
   ),
 ];
 final kNumberFormatter = [FilteringTextInputFormatter.digitsOnly];
+final kCallUpNumberFormatter = [
+  FilteringTextInputFormatter.allow(RegExp('[a-zA-Z0-9/]')),
+];
 final kPasswordFormatter = [
   FilteringTextInputFormatter.allow(
     RegExp(
@@ -50,6 +57,7 @@ final kPasswordFormatter = [
 ];
 
 const kNameCapitalization = TextCapitalization.words;
+const kUpperCase = TextCapitalization.characters;
 const kEmailKeyboard = TextInputType.emailAddress;
 const kNameKeyboard = TextInputType.text;
 const kNumberKeyboard = TextInputType.number;

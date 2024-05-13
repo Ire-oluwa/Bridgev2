@@ -24,13 +24,13 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 3),
     );
     animation = CurvedAnimation(parent: controller, curve: Curves.elasticOut);
     controller.forward();
 
     Future.delayed(
-      const Duration(seconds: 5),
+      const Duration(seconds: 3),
       () {
         Get.offNamed(RouteName.onboardingOne);
       },
