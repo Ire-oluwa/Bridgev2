@@ -21,3 +21,7 @@ const String kEnterNewPassword = "Enter your new password";
 const String kSex = "Sex";
 const String kUploadID = "Upload your ID";
 const String kHaveNoAccount = "Don't have an account?";
+const String kHome = "Home";
+const String kMessage = "Message";
+const String kMaami = "Maami";
+const String kWallet = "Wallet";

@@ -9,6 +9,7 @@ const kBlurColour = Color(0xFF19392C);
 const kYellowBackground = Color(0xffFAD918);
 const kFadedYellow = Color(0xffFFFADF);
 const kTextFieldBorder = Color(0xffB8C9C9);
+const kDashboardBackground = Color(0xffA5A5A5);
 
 Widget kUnfocus({child}) => GestureDetector(
   behavior: HitTestBehavior.translucent,

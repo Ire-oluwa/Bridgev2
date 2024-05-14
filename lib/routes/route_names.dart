@@ -5,7 +5,11 @@ abstract class RouteName {
   static const onboardingThree = "/onboardingThree";
   static const signUp = "/signUp";
   static const signIn = "/signIn";
-  static const resetPasswordEmailLink = "/Reset Password";
-  static const resetPasswordConfirmPassword = "/Reset Password Confirm";
-
+  static const resetPasswordEmailLink = "/resetPassword";
+  static const resetPasswordConfirmPassword = "/resetPasswordConfirm";
+  static const dashboard = "/dashboard";
+  static const homeScreen = "/homeScreen";
+  static const maamiScreen = "/maamiScreen";
+  static const messageScreen = "/messageScreen";
+  static const walletScreen = "/walletScreen";
 }

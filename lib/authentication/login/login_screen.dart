@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                         fontWeight: kExtraBold,
                       ),
                     ),
-                    MySpace(),
+                    const MySpace(),
                     MyTextField(
                       controller: loginController.email,
                       label: kEmailAddress,
@@ -66,7 +66,9 @@ class LoginScreen extends StatelessWidget {
                     ),
                     MySpace(height: 16.h),
                     MyButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(RouteName.resetPasswordEmailLink);
+                      },
                       colour: kYellowBackground,
                       child: MyText(
                         text: kLogin,

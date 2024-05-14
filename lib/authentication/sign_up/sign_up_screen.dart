@@ -6,10 +6,8 @@ import 'package:bridge_v2/utilities/widgets/my_button.dart';
 import 'package:bridge_v2/utilities/widgets/my_text.dart';
 import 'package:bridge_v2/utilities/widgets/my_textfield.dart';
 import 'package:bridge_v2/utilities/widgets/space.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -88,6 +86,7 @@ class SignUpScreen extends StatelessWidget {
                       label: kPhoneNumber,
                       hint: kPhoneNumber,
                       textFormatter: kNumberFormatter,
+                      maxLength: 11,
                     ),
                     MySpace(height: 16.h),
                     Align(
@@ -152,7 +151,9 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     const MySpace(),
                     MyButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(RouteName.dashboard);
+                      },
                       colour: kYellowBackground,
                       child: MyText(
                         text: kSignUp,

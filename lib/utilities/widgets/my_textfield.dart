@@ -38,6 +38,7 @@ class MyTextField extends StatelessWidget {
             decoration: InputDecoration(
               hintText: hint ?? "",
               isDense: true,
+              counterText: "",
               suffixIcon: suffixIcon,
               border: OutlineInputBorder(borderSide: BorderSide(width: 0.5.w)),
             ),
