@@ -48,7 +48,7 @@ class ResetPasswordConfirmPasswordScreen extends StatelessWidget {
                       child: MyText(
                         text: kEnterNewPassword,
                         fontSize: 14.sp,
-                        fontWeight: kNormal,
+                        fontWeight: kRegular,
                       ),
                     ),
                     MySpace(height: 16.h),

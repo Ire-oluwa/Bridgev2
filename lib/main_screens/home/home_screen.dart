@@ -1,3 +1,4 @@
+import 'package:bridge_v2/main_screens/home/dashboard_controller.dart';
 import 'package:bridge_v2/main_screens/home/home_controller.dart';
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:bridge_v2/utilities/strings.dart';
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(HomeController());
+    final dashboardController = Get.put(DashboardController());
     return DefaultTabController(
       length: controller.tabPages.length,
       child: SafeArea(
@@ -36,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconButton(
-                              onPressed: () {},
+                              onPressed: ()=> dashboardController.scaffoldKey.currentState?.openDrawer(),
                               icon: const Icon(
                                 Icons.more_vert,
                                 color: kPrimaryWhite,
@@ -65,6 +67,7 @@ class HomeScreen extends StatelessWidget {
           ),
           body: Container(
             color: kGrey,
+            padding: EdgeInsets.fromLTRB(23.5.w, 20.h, 23.5.w, 0),
             child: TabBarView(
               children: controller.tabPages,
             ),

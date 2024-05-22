@@ -118,7 +118,7 @@ class SignUpScreen extends StatelessWidget {
                         hint: MyText(
                           text: kSex,
                           fontSize: 16.sp,
-                          fontWeight: kNormal,
+                          fontWeight: kRegular,
                         ),
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(), isDense: true),

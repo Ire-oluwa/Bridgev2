@@ -5,11 +5,13 @@ import 'package:bridge_v2/main_screens/message/message_screen.dart';
 import 'package:bridge_v2/main_screens/wallet/wallet_screen.dart';
 import 'package:bridge_v2/utilities/strings.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class DashboardController extends GetxController {
 
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   RxInt selectedIndex = 0.obs;
 
   void onItemTapped(int index){

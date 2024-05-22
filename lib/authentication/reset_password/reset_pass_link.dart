@@ -44,7 +44,7 @@ class ResetPasswordEmailScreen extends StatelessWidget {
                     ),
                     const MySpace(),
                     MyText(
-                        text: kResetText, fontSize: 14.sp, fontWeight: kNormal),
+                        text: kResetText, fontSize: 14.sp, fontWeight: kRegular),
                     MySpace(height: 16.h),
                     MyTextField(
                       hint: kEmailAddress,
