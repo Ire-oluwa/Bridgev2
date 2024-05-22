@@ -20,7 +20,7 @@ class Dashboard extends StatelessWidget {
         shape: const CircleBorder(),
         child: const Icon(Icons.add, color: kPrimaryWhite),
       ),
-      body: controller.screens.elementAt(controller.selectedIndex.value),
+      body: Obx(() => controller.screens.elementAt(controller.selectedIndex.value)),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
           items: controller.items,
@@ -29,9 +29,7 @@ class Dashboard extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           unselectedItemColor: kPrimaryBlack,
           selectedItemColor: kPrimaryBlack,
-          // unselectedLabelStyle: GoogleFonts.manrope(
-          //     fontSize: 14.sp, fontWeight: kBold, color: kPrimaryBlack),
-          onTap: controller.onItemTapped,
+          onTap: (index)=> controller.onItemTapped(index),
         ),
       ),
     );

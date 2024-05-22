@@ -25,3 +25,5 @@ const String kHome = "Home";
 const String kMessage = "Message";
 const String kMaami = "Maami";
 const String kWallet = "Wallet";
+const String kTrending = "Trending";
+const String kMyConnects = "My Connects";
