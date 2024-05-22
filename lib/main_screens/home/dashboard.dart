@@ -1,9 +1,12 @@
 import 'package:bridge_v2/main_screens/home/dashboard_controller.dart';
 import 'package:bridge_v2/main_screens/home/home_controller.dart';
 import 'package:bridge_v2/utilities/constants.dart';
+import 'package:bridge_v2/utilities/strings.dart';
 import 'package:bridge_v2/utilities/widgets/my_text.dart';
+import 'package:bridge_v2/utilities/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -38,11 +41,18 @@ class Dashboard extends StatelessWidget {
         drawer: Drawer(
           backgroundColor: kPrimaryBlack,
           width: 260.w,
-          child: Column(
-            children: [
-              MyListTile(
-              ),
-            ],
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(16.w, 32.h, 16.w, 156.h),
+            child: Column(
+              children: [
+                MyListTile(leading: SvgPicture.asset("images/home_screen/notification.svg"), text: kNotification, onTap: (){},),
+                MyListTile(leading: SvgPicture.asset("images/home_screen/dollar-circle.svg"), text: kTransactions, onTap: (){},),
+                MyListTile(leading: SvgPicture.asset("images/home_screen/house.svg"), text: kAccommodation, onTap: (){},),
+                MyListTile(leading: SvgPicture.asset("images/home_screen/settings.svg"), text: kSettings, onTap: (){},),
+                MySpace(height: 320.h),
+                MyListTile(leading: SvgPicture.asset("images/home_screen/logout.svg"), text: kLogout, onTap: (){},),
+              ],
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -70,20 +80,20 @@ class Dashboard extends StatelessWidget {
 
 class MyListTile extends StatelessWidget {
   const MyListTile({
-    super.key, this.leading, this.text, this.fontSize, this.fontWeight, this.colour, this.onTap,
+    super.key, this.leading, this.text, this.fontSize, this.fontWeight, this.textColour, this.onTap,
   });
   final Widget? leading;
   final String? text;
   final double? fontSize;
   final FontWeight? fontWeight;
-  final Color? colour;
+  final Color? textColour;
   final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: leading,
-      title: MyText(text: text ?? "", fontSize: fontSize ?? 17.sp, fontWeight: fontWeight ?? kRegular, colour: colour ?? kPrimaryWhite,),
+      title: MyText(text: text ?? "", fontSize: fontSize ?? 17.sp, fontWeight: fontWeight ?? kRegular, colour: textColour ?? kPrimaryWhite,),
       onTap: onTap,
     );
   }
