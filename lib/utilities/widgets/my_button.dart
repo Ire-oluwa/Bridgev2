@@ -1,3 +1,4 @@
+import 'package:bridge_v2/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,7 +26,7 @@ class MyButton extends StatelessWidget {
       onPressed: onPressed,
       height: height ?? 56.h,
       minWidth: width ?? 327.w,
-      color: colour,
+      color: colour ?? kYellowBackground,
       padding: padding,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
       child: child,

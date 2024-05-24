@@ -33,4 +33,5 @@ const String kAccommodation = "Accommodation";
 const String kSettings = "Settings";
 const String kLogout = "Log out";
 const String kNewPost = "New Post";
-const String kPost = "What do you have in mind today?";
+const String kPostHint = "What do you have in mind?";
+const String kPost = "Post";

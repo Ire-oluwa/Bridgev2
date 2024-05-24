@@ -1,5 +1,6 @@
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:bridge_v2/utilities/strings.dart';
+import 'package:bridge_v2/utilities/widgets/my_button.dart';
 import 'package:bridge_v2/utilities/widgets/my_text.dart';
 import 'package:bridge_v2/utilities/widgets/my_textfield.dart';
 import 'package:bridge_v2/utilities/widgets/space.dart';
@@ -16,8 +17,15 @@ class NewPost extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kPrimaryBlack,
         centerTitle: true,
-        leading: const BackButton(color: kPrimaryWhite,),
-        title: MyText(text: kNewPost, colour: kPrimaryWhite, fontSize: 20.sp, fontWeight: kExtraBold,),
+        leading: const BackButton(
+          color: kPrimaryWhite,
+        ),
+        title: MyText(
+          text: kNewPost,
+          colour: kPrimaryWhite,
+          fontSize: 20.sp,
+          fontWeight: kExtraBold,
+        ),
       ),
       body: kUnfocus(
         child: SingleChildScrollView(
@@ -27,9 +35,50 @@ class NewPost extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(24.w, 32.h, 18.w, 76.h),
             child: Column(
               children: [
-                Row(),
-                MySpace(),
-                MyTextField(textFieldSize: 321.h, hint: kPost, textInputAction: TextInputAction.newline,),
+                Row(
+                  children: [
+                    CircleAvatar(backgroundColor: kPrimaryWhite, radius: 25.r),
+                  ],
+                ),
+                const MySpace(),
+                MyTextField(
+                  textFieldSize: 321.h,
+                  hint: kPostHint,
+                  textInputAction: TextInputAction.newline,
+                ),
+                const MySpace(),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: kPrimaryBlack,
+                          radius: 25.r,
+                          child: const Icon(
+                            Icons.add,
+                            color: kPrimaryWhite,
+                          ),
+                        ),
+                        CircleAvatar(backgroundColor: kDashboardBackground, radius: 25.r),
+                        CircleAvatar(backgroundColor: kDashboardBackground, radius: 25.r),
+                        CircleAvatar(backgroundColor: kDashboardBackground, radius: 25.r),
+                        CircleAvatar(backgroundColor: kDashboardBackground, radius: 25.r),
+                      ],
+                    ),
+                  ),
+                ),
+                MySpace(height: 69.h),
+                MyButton(
+                  onPressed: () {},
+                  height: 56.h,
+                  child: MyText(
+                    text: kPost,
+                    fontSize: 16.sp,
+                    fontWeight: kBlack,
+                  ),
+                ),
               ],
             ),
           ),
