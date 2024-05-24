@@ -12,4 +12,5 @@ abstract class RouteName {
   static const maamiScreen = "/maamiScreen";
   static const messageScreen = "/messageScreen";
   static const walletScreen = "/walletScreen";
+  static const newPost = "/newPost";
 }

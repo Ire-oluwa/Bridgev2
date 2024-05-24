@@ -1,5 +1,6 @@
 import 'package:bridge_v2/main_screens/home/dashboard_controller.dart';
 import 'package:bridge_v2/main_screens/home/home_controller.dart';
+import 'package:bridge_v2/routes/route_names.dart';
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:bridge_v2/utilities/strings.dart';
 import 'package:flutter/cupertino.dart';
@@ -71,6 +72,12 @@ class HomeScreen extends StatelessWidget {
             child: TabBarView(
               children: controller.tabPages,
             ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: ()=> Get.toNamed(RouteName.newPost),
+            backgroundColor: kPrimaryBlack,
+            shape: const CircleBorder(),
+            child: const Icon(Icons.add, color: kPrimaryWhite),
           ),
         ),
       ),

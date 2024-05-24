@@ -4,6 +4,7 @@ import 'package:bridge_v2/authentication/reset_password/reset_pass_link.dart';
 import 'package:bridge_v2/authentication/sign_up/sign_up_screen.dart';
 import 'package:bridge_v2/main_screens/home/dashboard.dart';
 import 'package:bridge_v2/main_screens/home/home_screen.dart';
+import 'package:bridge_v2/main_screens/home/new_post.dart';
 import 'package:bridge_v2/main_screens/maami/maami_screen.dart';
 import 'package:bridge_v2/main_screens/message/message_screen.dart';
 import 'package:bridge_v2/main_screens/wallet/wallet_screen.dart';
@@ -25,5 +26,6 @@ class AppPages {
     GetPage(name: RouteName.maamiScreen, page: ()=> const MaamiScreen()),
     GetPage(name: RouteName.messageScreen, page: ()=> const MessageScreen()),
     GetPage(name: RouteName.walletScreen, page: ()=> const WalletScreen()),
+    GetPage(name: RouteName.newPost, page: ()=> const NewPost()),
   ];
 }

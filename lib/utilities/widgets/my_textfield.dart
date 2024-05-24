@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyTextField extends StatelessWidget {
-  const MyTextField({super.key, this.hint, this.label, this.onTap, this.suffixIcon, this.capitalization, this.textFormatter, this.controller, this.maxLength, this.obscure, this.inputType});
+  const MyTextField({super.key, this.hint, this.label, this.onTap, this.suffixIcon, this.capitalization, this.textFormatter, this.controller, this.maxLength, this.obscure, this.inputType, this.textFieldSize, this.textInputAction,});
 
   final String? hint;
   final String? label;
@@ -18,6 +18,8 @@ class MyTextField extends StatelessWidget {
   final int? maxLength;
   final bool? obscure;
   final TextInputType? inputType;
+  final double? textFieldSize;
+  final TextInputAction? textInputAction;
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +28,18 @@ class MyTextField extends StatelessWidget {
       children: [
         MyText(text: label ?? "", fontSize: 14.sp, fontWeight: kSemiBold),
         SizedBox(
-          height: 45.h,
+          height: textFieldSize ?? 45.h,
           child: TextField(
             textCapitalization: capitalization ?? TextCapitalization.none,
             inputFormatters: textFormatter,
-            textInputAction: kTextInputAction,
+            textInputAction: textInputAction ?? kTextInputAction,
             controller: controller,
             maxLength: maxLength,
+            maxLines: null,
             obscureText: obscure ?? false,
             keyboardType: inputType,
+            expands: true,
+            textAlignVertical: TextAlignVertical.top,
             decoration: InputDecoration(
               hintText: hint ?? "",
               isDense: true,

@@ -55,12 +55,6 @@ class Dashboard extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: kPrimaryBlack,
-          shape: const CircleBorder(),
-          child: const Icon(Icons.add, color: kPrimaryWhite),
-        ),
         body: Obx(() => controller.screens.elementAt(controller.selectedIndex.value)),
         bottomNavigationBar: Obx(
           () => BottomNavigationBar(
