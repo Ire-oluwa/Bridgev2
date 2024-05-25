@@ -2,13 +2,10 @@ import 'package:bridge_v2/utilities/constants.dart';
 import 'package:bridge_v2/utilities/strings.dart';
 import 'package:bridge_v2/utilities/widgets/my_text.dart';
 import 'package:bridge_v2/utilities/widgets/space.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get_navigation/src/routes/get_transition_mixin.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:readmore/readmore.dart';
 

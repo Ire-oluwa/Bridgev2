@@ -1,5 +1,4 @@
 import 'package:bridge_v2/routes/route_names.dart';
-import 'package:bridge_v2/utilities/widgets/my_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -1,10 +1,8 @@
 import 'dart:async';
 
-import 'package:bridge_v2/onboarding/onboarding.dart';
 import 'package:bridge_v2/routes/route_names.dart';
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 

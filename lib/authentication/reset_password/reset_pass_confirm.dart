@@ -76,7 +76,7 @@ class ResetPasswordConfirmPasswordScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    MySpace(),
+                    const MySpace(),
                     Obx(
                       () => MyTextField(
                         hint: kPassword,
@@ -94,7 +94,7 @@ class ResetPasswordConfirmPasswordScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    MySpace(),
+                    const MySpace(),
                     MyButton(
                       onPressed: () =>
                           Get.toNamed(RouteName.resetPasswordConfirmPassword),

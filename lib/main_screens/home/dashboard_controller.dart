@@ -1,10 +1,8 @@
-import 'package:bridge_v2/main_screens/home/dashboard.dart';
 import 'package:bridge_v2/main_screens/home/home_screen.dart';
 import 'package:bridge_v2/main_screens/maami/maami_screen.dart';
 import 'package:bridge_v2/main_screens/message/message_screen.dart';
 import 'package:bridge_v2/main_screens/wallet/wallet_screen.dart';
 import 'package:bridge_v2/utilities/strings.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -12,6 +10,12 @@ import 'package:get/get.dart';
 class DashboardController extends GetxController {
 
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+  // @override
+  // void onClose() {
+  //   scaffoldKey.currentState?.closeDrawer();
+  //   super.onClose();
+  // }
   RxInt selectedIndex = 0.obs;
 
   void onItemTapped(int index){

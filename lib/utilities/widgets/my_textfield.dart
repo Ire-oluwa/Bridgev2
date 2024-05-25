@@ -3,7 +3,6 @@ import 'package:bridge_v2/utilities/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MyTextField extends StatelessWidget {
   const MyTextField({super.key, this.hint, this.label, this.onTap, this.suffixIcon, this.capitalization, this.textFormatter, this.controller, this.maxLength, this.obscure, this.inputType, this.textFieldSize, this.textInputAction,});

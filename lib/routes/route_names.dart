@@ -13,4 +13,15 @@ abstract class RouteName {
   static const messageScreen = "/messageScreen";
   static const walletScreen = "/walletScreen";
   static const newPost = "/newPost";
+  static const notifications = "/notifications";
+  static const transactions = "/transactions";
+  static const settings = "/settings";
+  static const security = "/security";
+  static const profileScreen = "/profileScreen";
+  static const changePassword = "/changePassword";
+  static const transferPin = "/transferPin";
+  static const documentUpload = "/documentUpload";
+  static const withdrawalBank = "/withdrawalBank";
+  static const termsAndPrivacy = "/termsAndPrivacy";
+  static const helpsAndSupport = "/helpsAndSupport";
 }
