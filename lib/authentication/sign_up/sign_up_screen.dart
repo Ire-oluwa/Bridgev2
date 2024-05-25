@@ -139,6 +139,7 @@ class SignUpScreen extends StatelessWidget {
                         obscure: signUpController.isTextObscure.value,
                         controller: signUpController.password,
                         textFormatter: kPasswordFormatter,
+                        inputType: TextInputType.text,
                         suffixIcon: GestureDetector(
                           onTap: () => signUpController.obscureText(),
                           child: Icon(

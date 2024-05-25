@@ -27,23 +27,23 @@ class MyTextField extends StatelessWidget {
       children: [
         MyText(text: label ?? "", fontSize: 14.sp, fontWeight: kSemiBold),
         SizedBox(
-          height: textFieldSize ?? 45.h,
+          height: textFieldSize ?? 50.h,
           child: TextField(
             textCapitalization: capitalization ?? TextCapitalization.none,
             inputFormatters: textFormatter,
             textInputAction: textInputAction ?? kTextInputAction,
             controller: controller,
             maxLength: maxLength,
-            maxLines: null,
+            // maxLines: null,
             obscureText: obscure ?? false,
             keyboardType: inputType,
-            expands: true,
+            // expands: true,
             textAlignVertical: TextAlignVertical.top,
             decoration: InputDecoration(
               hintText: hint ?? "",
               isDense: true,
               counterText: "",
-              suffixIcon: suffixIcon,
+              suffix: suffixIcon,
               border: OutlineInputBorder(borderSide: BorderSide(width: 0.5.w)),
             ),
           ),

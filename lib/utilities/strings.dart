@@ -50,3 +50,7 @@ const String kWithdrawalBank = "Withdrawal Bank";
 const String kTermsAndPrivacy = "Terms & Privacy Policy";
 const String kHelpAndSupport = "Help and Support";
 const String kDeactivateAccount = "Deactivate Account";
+const String kChangePassword = "Change Password";
+const String kTransferPin = "Transfer Pin";
+const String kConfirmPin = "Confirm Pin";
+const String kSave = "Save";
