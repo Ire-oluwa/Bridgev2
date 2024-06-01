@@ -1,4 +1,5 @@
 import 'package:bridge_v2/main_screens/settings/security/security_controller.dart';
+import 'package:bridge_v2/routes/route_names.dart';
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:bridge_v2/utilities/strings.dart';
 import 'package:bridge_v2/utilities/widgets/my_button.dart';
@@ -20,7 +21,11 @@ class ChangePassword extends StatelessWidget {
       backgroundColor: kPrimaryBlack,
       appBar: AppBar(
         centerTitle: true,
-        title: MyText(text: kChangePassword, fontSize: 20.sp, fontWeight: kExtraBold,),
+        title: MyText(
+          text: kChangePassword,
+          fontSize: 20.sp,
+          fontWeight: kExtraBold,
+        ),
       ),
       body: kUnfocus(
         child: Container(
@@ -31,34 +36,49 @@ class ChangePassword extends StatelessWidget {
             child: Column(
               children: [
                 Obx(
-                  ()=> MyTextField(
+                  () => MyTextField(
                     controller: controller.password,
                     label: kPassword,
                     hint: kPassword,
                     textFormatter: kPasswordFormatter,
-                     obscure: controller.isTextObscure.value,
+                    obscure: controller.isPasswordObscure.value,
                     suffixIcon: GestureDetector(
-                      onTap: ()=> controller.obscureText(),
-                      child: FaIcon(controller.isTextObscure.value ? FontAwesomeIcons.eyeSlash : FontAwesomeIcons.eye, size: 16.sp),
+                      onTap: () => controller.obscurePassword(),
+                      child: Icon(
+                        controller.isPasswordObscure.value == true
+                            ? Icons.remove_red_eye_outlined
+                            : Icons.remove_red_eye_sharp,
+                      ),
                     ),
                   ),
                 ),
                 const MySpace(),
                 Obx(
-                      ()=> MyTextField(
+                  () => MyTextField(
                     controller: controller.confirmPassword,
                     label: kConfirmPassword,
                     hint: kConfirmPassword,
                     textFormatter: kPasswordFormatter,
                     obscure: controller.isConfirmPasswordObscure.value,
                     suffixIcon: GestureDetector(
-                      onTap: ()=> controller.obscureConfirmPassword(),
-                      child: FaIcon(controller.isConfirmPasswordObscure.value ? FontAwesomeIcons.eyeSlash : FontAwesomeIcons.eye, size: 16.sp),
+                      onTap: () => controller.obscureConfirmPassword(),
+                      child: Icon(
+                        controller.isConfirmPasswordObscure.value == true
+                            ? Icons.remove_red_eye_outlined
+                            : Icons.remove_red_eye_sharp,
+                      ),
                     ),
                   ),
                 ),
                 const MySpace(),
-                MyButton(onPressed: (){},child: MyText(text: kChangePassword, fontSize: 16.sp, fontWeight: kBlack,),),
+                MyButton(
+                  onPressed: () => Get.toNamed(RouteName.transferPin),
+                  child: MyText(
+                    text: kChangePassword,
+                    fontSize: 16.sp,
+                    fontWeight: kBlack,
+                  ),
+                ),
               ],
             ),
           ),

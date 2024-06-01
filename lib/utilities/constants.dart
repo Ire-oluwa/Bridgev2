@@ -29,7 +29,7 @@ const FontWeight kExtraBold = FontWeight.w800;
 const FontWeight kBlack = FontWeight.w900;
 
 /// Text Inputs
-const kTextInputAction = TextInputAction.next;
+const kNextInputAction = TextInputAction.next;
 //FORMATTERS
 
 final kNameFormatter = [

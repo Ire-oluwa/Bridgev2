@@ -41,10 +41,24 @@ class NewPost extends StatelessWidget {
                   ],
                 ),
                 const MySpace(),
-                MyTextField(
-                  textFieldSize: 321.h,
-                  hint: kPostHint,
-                  textInputAction: TextInputAction.newline,
+                SizedBox(
+                  height: 321.h,
+                  child: TextField(
+                    textCapitalization: TextCapitalization.sentences,
+                    textInputAction: TextInputAction.newline,
+                    controller: TextEditingController(),
+                    // maxLength: maxLength,
+                    minLines: null,
+                    maxLines: null,
+                    expands: true,
+                    textAlignVertical: TextAlignVertical.top,
+                    decoration: InputDecoration(
+                      hintText: kPostHint,
+                      isDense: true,
+                      // counterText: "",
+                      border: OutlineInputBorder(borderSide: BorderSide(width: 0.5.w)),
+                    ),
+                  ),
                 ),
                 const MySpace(),
                 Card(

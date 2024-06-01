@@ -31,7 +31,7 @@ class MyTextField extends StatelessWidget {
           child: TextField(
             textCapitalization: capitalization ?? TextCapitalization.none,
             inputFormatters: textFormatter,
-            textInputAction: textInputAction ?? kTextInputAction,
+            textInputAction: textInputAction ?? kNextInputAction,
             controller: controller,
             maxLength: maxLength,
             // maxLines: null,
