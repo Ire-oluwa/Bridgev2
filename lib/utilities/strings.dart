@@ -60,3 +60,5 @@ const String kAccountNumber = "Account Number";
 const String kBank = "Bank";
 const String kBankAccount = "Bank Account";
 const String kIdDocument = "ID Document";
+const String kEditProfile = "Edit Profile";
+const String kShareProfile = "Share Profile";

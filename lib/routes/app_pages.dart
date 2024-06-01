@@ -10,6 +10,7 @@ import 'package:bridge_v2/main_screens/message/message_screen.dart';
 import 'package:bridge_v2/main_screens/notifications/notifications.dart';
 import 'package:bridge_v2/main_screens/settings/document_upload/document_upload.dart';
 import 'package:bridge_v2/main_screens/settings/help_and_support/help_and_support.dart';
+import 'package:bridge_v2/main_screens/settings/profile/edit_profile.dart';
 import 'package:bridge_v2/main_screens/settings/profile/profile_screen.dart';
 import 'package:bridge_v2/main_screens/settings/security/change_password.dart';
 import 'package:bridge_v2/main_screens/settings/security/security_screen.dart';
@@ -49,5 +50,6 @@ class AppPages {
     GetPage(name: RouteName.withdrawalBank, page: ()=> const WithdrawalBankScreen()),
     GetPage(name: RouteName.termsAndPrivacy, page: ()=> const TermsAndPrivacy()),
     GetPage(name: RouteName.helpsAndSupport, page: ()=> const HelpAndSupportScreen()),
+    GetPage(name: RouteName.editProfile, page: ()=> const EditProfileScreen()),
   ];
 }

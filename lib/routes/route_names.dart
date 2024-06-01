@@ -24,4 +24,5 @@ abstract class RouteName {
   static const withdrawalBank = "/withdrawalBank";
   static const termsAndPrivacy = "/termsAndPrivacy";
   static const helpsAndSupport = "/helpsAndSupport";
+  static const editProfile = "/editProfile";
 }
