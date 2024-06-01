@@ -43,7 +43,7 @@ class MyTextField extends StatelessWidget {
               hintText: hint ?? "",
               isDense: true,
               counterText: "",
-              suffix: suffixIcon,
+              suffixIcon: suffixIcon,
               border: OutlineInputBorder(borderSide: BorderSide(width: 0.5.w)),
             ),
           ),

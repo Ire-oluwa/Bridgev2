@@ -1,4 +1,3 @@
-import 'package:bridge_v2/main_screens/home/dashboard_controller.dart';
 import 'package:bridge_v2/main_screens/home/my_connects.dart';
 import 'package:bridge_v2/main_screens/home/trending.dart';
 import 'package:bridge_v2/utilities/strings.dart';
