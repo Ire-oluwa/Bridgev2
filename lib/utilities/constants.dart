@@ -53,7 +53,7 @@ final kCallUpNumberFormatter = [
 final kPasswordFormatter = [
   FilteringTextInputFormatter.allow(
     RegExp(
-      ('[a-zA-Z0-9_|#@!*?+%]'),
+      ('[a-zA-Z0-9_|#@!*?+%.]'),
     ),
   ),
 ];

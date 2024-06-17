@@ -18,7 +18,7 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final signUpController = Get.put(SignUpControl());
+    final controller = Get.put(SignUpControl());
     return Scaffold(
       backgroundColor: kYellowBackground,
       body: kUnfocus(
@@ -47,7 +47,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     MySpace(height: 10.h),
                     MyTextField(
-                      controller: signUpController.firstName,
+                      controller: controller.firstName,
                       label: kFirstName,
                       hint: kFirstName,
                       capitalization: kNameCapitalization,
@@ -56,7 +56,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     MySpace(height: 16.h),
                     MyTextField(
-                      controller: signUpController.lastName,
+                      controller: controller.lastName,
                       label: kLastName,
                       hint: kLastName,
                       capitalization: kNameCapitalization,
@@ -65,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     MySpace(height: 16.h),
                     MyTextField(
-                      controller: signUpController.email,
+                      controller: controller.email,
                       label: kEmailAddress,
                       hint: kEmailAddress,
                       textFormatter: kEmailFormatter,
@@ -73,7 +73,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     MySpace(height: 16.h),
                     MyTextField(
-                      controller: signUpController.callUpNumber,
+                      controller: controller.callUpNumber,
                       label: kCallUpNumber,
                       hint: kCallUpNumber,
                       capitalization: kUpperCase,
@@ -82,10 +82,11 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     MySpace(height: 16.h),
                     MyTextField(
-                      controller: signUpController.phoneNumber,
+                      controller: controller.phoneNumber,
                       label: kPhoneNumber,
                       hint: kPhoneNumber,
                       textFormatter: kNumberFormatter,
+                      inputType: kNumberKeyboard,
                       maxLength: 11,
                     ),
                     MySpace(height: 16.h),
@@ -105,11 +106,13 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     MySpace(height: 16.h),
                     Align(
-                        alignment: Alignment.topLeft,
-                        child: MyText(
-                            text: kSex,
-                            fontSize: 14.sp,
-                            fontWeight: kSemiBold)),
+                      alignment: Alignment.topLeft,
+                      child: MyText(
+                        text: kSex,
+                        fontSize: 14.sp,
+                        fontWeight: kSemiBold,
+                      ),
+                    ),
                     SizedBox(
                       height: 50.h,
                       child: DropdownButtonFormField(
@@ -122,11 +125,10 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(), isDense: true),
-                        items: signUpController.genders
+                        items: controller.genders
                             .map<DropdownMenuItem<String>>((String gender) =>
                                 DropdownMenuItem(
-                                    value: signUpController.selectedGender,
-                                    child: MyText(text: gender)))
+                                    value: gender, child: MyText(text: gender)))
                             .toList(),
                         onChanged: (String? value) {},
                       ),
@@ -136,14 +138,14 @@ class SignUpScreen extends StatelessWidget {
                       () => MyTextField(
                         hint: kPassword,
                         label: kPassword,
-                        obscure: signUpController.isTextObscure.value,
-                        controller: signUpController.password,
+                        obscure: controller.isTextObscure.value,
+                        controller: controller.password,
                         textFormatter: kPasswordFormatter,
                         inputType: TextInputType.text,
                         suffixIcon: GestureDetector(
-                          onTap: () => signUpController.obscureText(),
+                          onTap: () => controller.obscureText(),
                           child: Icon(
-                            signUpController.isTextObscure.value == true
+                            controller.isTextObscure.value == true
                                 ? Icons.remove_red_eye_outlined
                                 : Icons.remove_red_eye_sharp,
                           ),
@@ -152,7 +154,8 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     const MySpace(),
                     MyButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        await controller.savePersonalDetails();
                         Get.toNamed(RouteName.dashboard);
                       },
                       colour: kYellowBackground,
