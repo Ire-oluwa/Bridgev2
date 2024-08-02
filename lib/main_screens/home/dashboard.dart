@@ -15,30 +15,29 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(DashboardController());
-    return Obx(
-      () => Scaffold(
+    return Scaffold(
         key: controller.scaffoldKey,
         backgroundColor: kPrimaryBlack,
         extendBody: true,
-        appBar: controller.selectedIndex.value == 0
-            ? null
-            : AppBar(
-                flexibleSpace: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 45.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.more_vert,
-                            color: kPrimaryWhite,
-                          )),
-                      CircleAvatar(radius: 20.r, backgroundColor: kGrey),
-                    ],
-                  ),
-                ),
-              ),
+        // appBar: controller.selectedIndex.value == 0
+        //     ? null
+        //     : AppBar(
+        //         flexibleSpace: Padding(
+        //           padding: EdgeInsets.symmetric(horizontal: 45.w),
+        //           child: Row(
+        //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //             children: [
+        //               IconButton(
+        //                   onPressed: () {},
+        //                   icon: const Icon(
+        //                     Icons.more_vert,
+        //                     color: kPrimaryWhite,
+        //                   )),
+        //               // CircleAvatar(radius: 20.r, backgroundColor: kGrey),
+        //             ],
+        //           ),
+        //         ),
+        //       ),
         drawer: SafeArea(
           child: Drawer(
             backgroundColor: kPrimaryBlack,
@@ -106,8 +105,7 @@ class Dashboard extends StatelessWidget {
             onTap: (index) => controller.onItemTapped(index),
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
