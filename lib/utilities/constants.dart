@@ -11,6 +11,7 @@ const kFadedYellow = Color(0xffFFFADF);
 const kTextFieldBorder = Color(0xffB8C9C9);
 const kDashboardBackground = Color(0xffA5A5A5);
 const kTransparent = Colors.transparent;
+const kCardWhite = Color(0xFFFFFEF7);
 
 Widget kUnfocus({child}) => GestureDetector(
   behavior: HitTestBehavior.translucent,

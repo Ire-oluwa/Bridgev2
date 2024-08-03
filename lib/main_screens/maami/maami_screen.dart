@@ -41,13 +41,13 @@ class _MaamiScreenState extends State<MaamiScreen>
       child: Scaffold(
         backgroundColor: kGrey,
         body: kUnfocus(
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 32.h, 24.h, 0),
-            child: DefaultTabController(
-              length: controller.tabPages.length,
-              child: Column(
-                children: [
-                  TextField(
+          child: DefaultTabController(
+            length: controller.tabPages.length,
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(24.w, 32.h, 24.h, 0),
+                  child: TextField(
                     decoration: InputDecoration(
                       isDense: true,
                       border: OutlineInputBorder(
@@ -65,54 +65,86 @@ class _MaamiScreenState extends State<MaamiScreen>
                       fillColor: kPrimaryWhite,
                     ),
                   ),
-                  MySpace(height: 16.h),
-                  Container(
-                    color: kGrey,
-                    child: AppBar(
-                      backgroundColor: kGrey,
-                      leading: const SizedBox.shrink(),
-                      titleSpacing: 0.0,
-                      automaticallyImplyLeading: false,
-                      centerTitle: false,
-                      title: TabBar(
-                        indicator: BoxDecoration(
-                          color: kYellowBackground,
-                          borderRadius: BorderRadius.circular(8.r),
-                        ),
-                        // indicatorPadding: EdgeInsets.symmetric(horizontal: 8.w),
-                        indicatorSize: TabBarIndicatorSize.tab,
-                        dividerColor: kTransparent,
-                        labelColor: kPrimaryBlack,
-                        unselectedLabelColor: kPrimaryWhite,
-                        labelStyle: GoogleFonts.mulish(
-                          fontSize: 12.sp,
-                          fontWeight: kBold,
-                        ),
-                        unselectedLabelStyle: GoogleFonts.mulish(
-                          fontSize: 12.sp,
-                          fontWeight: kBold,
-                        ),
-                        indicatorColor: kTransparent,
-                        isScrollable: true,
-
-                        tabs: [
-                          Tab(text: kElectronics),
-                          Tab(text: kGrocery),
-                          Tab(text: kFurniture),
-                          Tab(text: kClothing),
-                          Tab(text: kSkincare),
-                        ],
-                      ),
+                ),
+                MySpace(height: 16.h),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 24.w),
+                  color: kGrey,
+                  // child: AppBar(
+                  //   backgroundColor: kGrey,
+                  //   // titleSpacing: -45.0,
+                  //   automaticallyImplyLeading: false,
+                  //   centerTitle: false,
+                  //   flexibleSpace: TabBar(
+                  //     indicator: BoxDecoration(
+                  //       color: kYellowBackground,
+                  //       borderRadius: BorderRadius.circular(8.r),
+                  //     ),
+                  //     // indicatorPadding: EdgeInsets.symmetric(horizontal: 8.w),
+                  //     indicatorSize: TabBarIndicatorSize.tab,
+                  //     dividerColor: kTransparent,
+                  //     labelColor: kPrimaryBlack,
+                  //     unselectedLabelColor: kPrimaryWhite,
+                  //     labelStyle: GoogleFonts.mulish(
+                  //       fontSize: 12.sp,
+                  //       fontWeight: kBold,
+                  //     ),
+                  //     unselectedLabelStyle: GoogleFonts.mulish(
+                  //       fontSize: 12.sp,
+                  //       fontWeight: kBold,
+                  //     ),
+                  //     indicatorColor: kTransparent,
+                  //     isScrollable: true,
+                  //
+                  //     tabs: const [
+                  //       Tab(text: kElectronics),
+                  //       Tab(text: kGrocery),
+                  //       Tab(text: kFurniture),
+                  //       Tab(text: kClothing),
+                  //       Tab(text: kSkincare),
+                  //     ],
+                  //   ),
+                  // ),
+                  child: TabBar(
+                    controller: _tabController,
+                    indicator: BoxDecoration(
+                      color: kYellowBackground,
+                      borderRadius: BorderRadius.circular(8.r),
                     ),
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    dividerColor: kTransparent,
+                    labelColor: kPrimaryBlack,
+                    unselectedLabelColor: kPrimaryWhite,
+                    labelStyle: GoogleFonts.mulish(
+                      fontSize: 12.sp,
+                      fontWeight: kBold,
+                    ),
+                    unselectedLabelStyle: GoogleFonts.mulish(
+                      fontSize: 12.sp,
+                      fontWeight: kBold,
+                    ),
+                    indicatorColor: kTransparent,
+                    isScrollable: true,
+                    tabs: const [
+                      Tab(text: kElectronics),
+                      Tab(text: kGrocery),
+                      Tab(text: kFurniture),
+                      Tab(text: kClothing),
+                      Tab(text: kSkincare),
+                    ],
                   ),
-                  Expanded(
+                ),
+                MySpace(height: 8.h),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24.w),
                     child: TabBarView(
                       controller: _tabController,
                       children: controller.tabPages,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
