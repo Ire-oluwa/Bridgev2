@@ -12,6 +12,6 @@ class MyText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, textAlign: align, style: GoogleFonts.mulish(color: colour, fontSize: fontSize, fontWeight: fontWeight), overflow: TextOverflow.ellipsis, maxLines: maxLines ?? 4,);
+    return Text(text, textAlign: align, style: GoogleFonts.mulish(color: colour, fontSize: fontSize, fontWeight: fontWeight), overflow: TextOverflow.ellipsis, maxLines: maxLines ?? 5,);
   }
 }

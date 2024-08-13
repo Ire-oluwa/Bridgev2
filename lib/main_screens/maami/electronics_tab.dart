@@ -1,12 +1,13 @@
 import 'dart:math';
 
+import 'package:bridge_v2/main_screens/maami/product_detail.dart';
 import 'package:bridge_v2/utilities/constants.dart';
 import 'package:bridge_v2/utilities/strings.dart';
 import 'package:bridge_v2/utilities/widgets/my_text.dart';
 import 'package:bridge_v2/utilities/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class ElectronicsTab extends StatelessWidget {
   const ElectronicsTab({super.key});
@@ -58,26 +59,29 @@ class ElectronicsTab extends StatelessWidget {
             shrinkWrap: true,
             itemCount: 4,
             itemBuilder: (context, index) {
-              return Card(
-                color: kCardWhite,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Image.asset("images/home_screen/headset.png"),
-                    Image.asset(shuffledImages[index]),
-                    MyText(
-                      text: "Headsets PN-900",
-                      fontSize: 12.sp,
-                      fontWeight: kSemiBold,
-                      colour: kGrey,
-                    ),
-                    MyText(
-                      text: "NGN 15,000",
-                      fontSize: 12.sp,
-                      fontWeight: kSemiBold,
-                      colour: kPrimaryBlack,
-                    ),
-                  ],
+              return GestureDetector(
+                onTap: ()=> Get.to(ProductDetailScreen()),
+                child: Card(
+                  color: kCardWhite,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Image.asset("images/home_screen/headset.png"),
+                      Image.asset(shuffledImages[index]),
+                      MyText(
+                        text: "Headsets PN-900",
+                        fontSize: 12.sp,
+                        fontWeight: kSemiBold,
+                        colour: kGrey,
+                      ),
+                      MyText(
+                        text: "NGN 15,000",
+                        fontSize: 12.sp,
+                        fontWeight: kSemiBold,
+                        colour: kPrimaryBlack,
+                      ),
+                    ],
+                  ),
                 ),
               );
             },
@@ -112,26 +116,29 @@ class ElectronicsTab extends StatelessWidget {
             shrinkWrap: true,
             itemCount: 2,
             itemBuilder: (context, index) {
-              return Card(
-                color: kCardWhite,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Image.asset("images/home_screen/headset.png"),
-                    Image.asset(shuffledImages[index]),
-                    MyText(
-                      text: "Headsets PN-900",
-                      fontSize: 12.sp,
-                      fontWeight: kSemiBold,
-                      colour: kGrey,
-                    ),
-                    MyText(
-                      text: "NGN 15,000",
-                      fontSize: 12.sp,
-                      fontWeight: kSemiBold,
-                      colour: kPrimaryBlack,
-                    ),
-                  ],
+              return GestureDetector(
+                onTap: ()=> Get.to(ProductDetailScreen()),
+                child: Card(
+                  color: kCardWhite,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Image.asset("images/home_screen/headset.png"),
+                      Image.asset(shuffledImages[index]),
+                      MyText(
+                        text: "Headsets PN-900",
+                        fontSize: 12.sp,
+                        fontWeight: kSemiBold,
+                        colour: kGrey,
+                      ),
+                      MyText(
+                        text: "NGN 15,000",
+                        fontSize: 12.sp,
+                        fontWeight: kSemiBold,
+                        colour: kPrimaryBlack,
+                      ),
+                    ],
+                  ),
                 ),
               );
             },

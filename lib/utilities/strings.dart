@@ -77,3 +77,6 @@ const String kClothingTopDeals = "Top deals on Electronics";
 const String kSkinCareTopDeals = "Top deals on Electronics";
 const String kRecentlyViewed = "RecentlyViewed";
 const String kViewAll = "View All";
+const String kProductDetail = "Product Detail";
+const String kAddToCart = "Add to Cart";
+const String kBuyNow = "Buy Now";
